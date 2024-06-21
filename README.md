@@ -1,4 +1,4 @@
-# Lodify
+# Lodgify
 
 ## Table of Contents
 - [Introduction](#introduction)
