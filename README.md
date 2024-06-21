@@ -35,7 +35,7 @@ To get a local copy up and running, follow these steps:
 
 1. **Clone the Repository:**
     ```sh
-    git clone https://github.com/your-repo/web-app.git
+    git clone https://github.com/Lodgify/web-app.git
     cd web-app
     ```
 
@@ -52,7 +52,7 @@ To get a local copy up and running, follow these steps:
 
 4. **Configure the Database:**
     - Ensure you have MySQL installed and running.
-    - Create a database named `airbnb_clone`.
+    - Create a database named `lodgify`.
     - Update the database configuration in `config.py` with your MySQL username and password.
 
 5. **Initialize the Database:**
