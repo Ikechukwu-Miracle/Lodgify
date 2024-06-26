@@ -35,7 +35,8 @@ class LodgifyCommand(cmd.Cmd):
         return True
 
     def default(self, line: str) -> None:
-        return super().default(line)
+        """Defines the default response when newline is entered"""
+        super().default(line)
 
     def do_EOF(self, line: str) -> bool:
         """Exits interpreter when user types (ctrl + d)"""
