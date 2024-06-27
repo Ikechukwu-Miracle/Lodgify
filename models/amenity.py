@@ -1,14 +1,11 @@
 #!/usr/bin/python3
-
+""" THis defines the Amenity Class """
 from models.base_model import BaseModel
 
 class Amenity(BaseModel):
-    """ Amenity inherits from BaseModel """
-    def __init__(self, *args, **kwargs):
-        """ Initializes amenity instance """
-        super().__init__(*args, **kwargs)
-        self.name = kwargs.get('name', '')
+    """ Amenity inherits from BaseModel.
+    Attributes:
+        name (str): The name of the Amenity.
+    """
 
-    def __str__(self):
-        """ Retrns String representation of Amenity Instance """
-        return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
+    name = ""
