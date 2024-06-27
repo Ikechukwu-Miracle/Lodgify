@@ -18,6 +18,7 @@ from models.review import Review
 class LodgifyCommand(cmd.Cmd):
     """Class that initializes a cmd interpreter"""
     prompt = "(lodgify) "
+    intro = """Welcome to Lodgify"""
     classes = [
         "BaseModel",
         "User",
@@ -33,6 +34,8 @@ class LodgifyCommand(cmd.Cmd):
     def do_quit(self, line: str) -> bool:
         """command to exit the cmd prompt"""
         return True
+
+    do_exit = do_quit
 
     def default(self, line: str) -> None:
         """Defines the default response when newline is entered"""
@@ -84,6 +87,14 @@ class LodgifyCommand(cmd.Cmd):
         obj = eval(line)()
         storage.save()
         print(obj.id)
+
+    def cmdloop(self, intro=None):
+        """Handle KeyboardInterrupt method"""
+        try:
+            super().cmdloop(intro)
+        except KeyboardInterrupt:
+            print("\nProcess interrupted. Type 'quit' or 'exit' to leave the console.")
+            self.cmdloop()
 
     def do_show(self, line):
         """Prints the str representarion of an instance

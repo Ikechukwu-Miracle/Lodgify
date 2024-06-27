@@ -1,3 +1,2 @@
-# List of files/folders to ignore
-
+models/__pycache__/
 __pycache__/
