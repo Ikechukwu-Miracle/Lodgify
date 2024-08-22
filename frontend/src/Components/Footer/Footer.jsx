@@ -2,6 +2,11 @@ import React, { useContext, useRef, useState } from 'react';
 import './Footer.css';
 import { LodgifyContext } from '../../Context/LodgifyContext';
 import { Link } from 'react-router-dom'
+import check_icon from '../Assets/footer_check_icon.png';
+import globe_icon from '../Assets/footer_globe_icon.png';
+import facebook from '../Assets/facebook.png';
+import twitter from '../Assets/twitter.png';
+import instagram from '../Assets/instagram.png';
 
 const Footer = () => {
 
@@ -171,7 +176,7 @@ const Footer = () => {
           </li>
         </ul>
 
-        <hr/>
+        <hr />
 
         <div className="inspiration-listing">
           {filteredItems.map((item) => (
@@ -185,9 +190,91 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="support">Hello</div>
+      <hr />
 
-      <div className="bottom">World</div>
+      <div className="support">
+        <div className="support-item">
+          <h4>Support</h4>
+          <a href="#">Help Center</a>
+          <a href="#">AirCover</a>
+          <a href="#">Anti-discrimination</a>
+          <a href="#">Disability support</a>
+          <a href="#">Cancellations options</a>
+          <a href="#">Report neighborhood concern</a>
+        </div>
+
+        <div className="support-item">
+          <h4>Hosting</h4>
+          <a href="#">Lodgify your home</a>
+          <a href="#">AirCover for Hosts</a>
+          <a href="#">Hosting resources</a>
+          <a href="#">Community forum</a>
+          <a href="#">Hosting responsibly</a>
+          <a href="#">Lodgify-friendly apartments</a>
+          <a href="#">Join a free Hosting class</a>
+        </div>
+
+        <div className="support-item">
+          <h4>Lodgify</h4>
+          <a href="#">Newsroom</a>
+          <a href="#">New features</a>
+          <a href="#">Careers</a>
+          <a href="#">Investors</a>
+          <a href="#">Gift cards</a>
+          <a href="#">Lodgify.org emergency stays</a>
+        </div>
+      </div>
+
+      <hr />
+
+      <div className="bottom">
+        <div className="privacy-section">
+          <p>&copy; 2024, Lodgify Inc.</p>
+          &#183;
+          <p>
+            <a href="#">Terms</a>
+          </p>
+          &#183;
+          <p>
+            <a href="#">Sitemap</a>
+          </p>
+          &#183;
+          <p>
+            <a href="#">Privacy</a>
+          </p>
+          &#183;
+          <p>
+            <a href="#">Your Privacy Choices</a>
+          </p>
+          <div className="privacy-image">
+            <img src={check_icon} alt="" />
+          </div>
+        </div>
+
+        <div className="socials">
+          <div className="globe-image">
+            <a href="#"><img src={globe_icon} alt=""/></a>
+            <a href="#">English (US)</a>
+          </div>
+
+          <a href="#">NGN</a>
+          <div className="images">
+            <a href="#">
+              <img src={facebook} alt=""/>
+            </a>
+          </div>
+          <div className="images">
+            <a href="#">
+              <img src={twitter} alt=""/>
+            </a>
+          </div>
+          <div className="images">
+            <a href="#">
+              <img src={instagram} alt=""/>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
